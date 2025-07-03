@@ -1,4 +1,4 @@
-export function checkWinner(board) {
+function checkWinner(board) {
   const winPatterns = [
     [0, 1, 2],
     [3, 4, 5],
@@ -18,3 +18,5 @@ export function checkWinner(board) {
   }
   return null;
 }
+
+module.exports = { checkWinner };

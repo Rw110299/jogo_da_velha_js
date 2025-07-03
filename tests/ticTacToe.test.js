@@ -1,5 +1,4 @@
-import { checkWinner } from '../cod/ticTacToe.js';
-
+const { checkWinner } = require('../cod/ticTacToe.js');
 test('Detecta vitória em linha', () => {
   const board = ['X', 'X', 'X', '', '', '', '', '', ''];
   expect(checkWinner(board)).toEqual({ player: 'X', combination: [0, 1, 2] });
