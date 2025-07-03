@@ -1,4 +1,4 @@
-function checkWinner(board) {
+export function checkWinner(board) {
   const winPatterns = [
     [0, 1, 2],
     [3, 4, 5],
@@ -12,11 +12,9 @@ function checkWinner(board) {
 
   for (let pattern of winPatterns) {
     const [a, b, c] = pattern;
-    if (board[a] && board[a] === board[b] && board[b] === board[c]) {
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
       return { player: board[a], combination: pattern };
     }
   }
   return null;
 }
-
-module.exports = { checkWinner };
